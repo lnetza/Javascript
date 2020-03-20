@@ -18,11 +18,18 @@ class Cliente{
 class Empresa extends Cliente{
     constructor(nombre, saldo, telefono, tipo){
 
-        //Va hacia el constructor Padre
+        //Va hacia el constructor Padre de donde se heredo
         super(nombre, saldo);
 
         //No existen en el constructor padre
         this.telefono=telefono;
         this.tipo=tipo;
     }
+
+    static bienvenida(){
+        return 'Bienvenido al cajero para empresas';
+    }
 }
+
+console.log(Cliente.bienvenida());
+console.log(Empresa.bienvenida());
